@@ -1,13 +1,18 @@
 # Identify tools that will allow you to do the following:
 
 ## Scan infrastructure as code templates
-
+Regula
 ### Example vulnerability
+FG_R00028: S3 bucket ACLs should not have public access on S3 buckets that store CloudTrail log files
+
 
 ##Scan AMI’s or containers for OS vulnerabilities
-
+Amazon Inspector
 ### Example vulnerability
+Network Reachability-1.1
+
 
 ##Scan an AWS environment for cloud configuration vulnerabilities
-
+AWS Config
 ### Example vulnerability
+securityhub-subnet-auto-assign-public-ip-disabled

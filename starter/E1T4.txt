@@ -1,0 +1,9 @@
+Identify 2 poor security practices with justification.
+
+# Poor practice 1
+ApplicationInstance is on Public Subnet exposed to the internet. 
+A public IP address can be a target of attacks on the internet.
+The security group should be modified to allow only tcp conections from the application load balancer.
+
+# Poor practice 2
+The InstanceRolePolicy-C3 is very generic, and allow the EC2 isntance to get access to the uncrypted bucket of secret recipes.

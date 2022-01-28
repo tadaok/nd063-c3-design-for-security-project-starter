@@ -1,3 +1,55 @@
 Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+Issues listed on Config
+
+	-securityhub-vpc-sg-restricted-common-ports-c0366f71	
+	-securityhub-elb-deletion-protection-enabled-4aff6e8a
+	-securityhub-elb-logging-enabled-3bbc2a42
+	-securityhub-alb-http-to-https-redirection-check-e9d2765c
+	-securityhub-alb-http-drop-invalid-header-enabled-1850a5d0
+	-securityhub-encrypted-volumes-a3d810b7
+	-securityhub-ec2-instance-no-public-ip-a068b103
+	-securityhub-ec2-imdsv2-check-c00a0e31
+	-securityhub-ec2-ebs-encryption-by-default-323c5023
+	-securityhub-ec2-instance-managed-by-ssm-f5c041e8
+	-securityhub-service-vpc-endpoint-enabled-43658452
+	-securityhub-vpc-sg-open-only-to-authorized-ports-2ff3c8b9
+	-securityhub-subnet-auto-assign-public-ip-disabled-4d200174
+	-securityhub-restricted-rdp-cb9b0b5e
+	-securityhub-restricted-ssh-56dad9f9
+	-securityhub-s3-bucket-logging-enabled-e427d022
+	-securityhub-s3-bucket-level-public-access-prohibited-88ddd8b6
+	-securityhub-s3-bucket-server-side-encryption-enabled-71f9f090
+	-securityhub-s3-bucket-ssl-requests-only-a72357b7
+	
+Issues listed on Security Hub
+	-Port range 0 to 65535 is reachable from an Internet Gateway
+	-Port 22 is reachable from an Internet Gateway (RecipeWebServiceInstance)
+	-Port 22 is reachable from an Internet Gateway (AttackInstance)
+	-Port 80 is reachable from an Internet Gateway (RecipeWebServiceInstance)
+	-Port 5000 is reachable from an Internet Gateway (RecipeWebServiceInstance)
+
 
 Bonus - provide recommendations on how to remediate the vulnerabilities.
+
+	-Update the security group WebAppSG with the changes bellow:
+		-remove the ingress port 80
+		-restrict the ssh on por 22 using a known ip or a coporate ip bandwidth
+		-change the ingress port 5000 to receive only connection from AppLoadBalancerSG.
+	-Add the property RestrictPublicBuckets to the S3 buckets to disable the public access.
+	-Add ServerSideEncryptionConfiguration to the S3 buckets
+	-Add the property deletion_protection.enabled with the value true on ELB to prevent deletion.
+	-Add the property access_logs.s3.enabled as true and also the property access_logs.s3.bucket with a bucket reference to enable ELB logs.
+	-Add a redirect rule to the ELB to redirect http to https
+	
+	
+	
+	
+	
+	
+		
+		
+
+
+
+
+	

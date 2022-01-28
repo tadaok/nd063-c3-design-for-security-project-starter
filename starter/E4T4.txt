@@ -1,8 +1,19 @@
 
 # What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+To reduce the internet facing attack of the web application we can move it to a private subnet. This way the application instance will not have a public ip address and will only receive requests from the application load balancer.
+
 
 # Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+The VPC private endpoints will create a way to allow the application server to access the bucket without exist the VPC, but this will NOT prevent the unauthorized access.
+To prevent this it is necessary to change the bucket permission to Block all public access
+
 
 # Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+Applying the default encryption will not change the existent object on the bucket. Only new objects will be encrypted.
+
 
 # What would happen if the original cloud formation templates are applied to this environment.
+An Exception is displayed:
+An error occurred (AlreadyExistsException) when calling the CreateStack operation: Stack [c3-s3] already exists
+An error occurred (AlreadyExistsException) when calling the CreateStack operation: Stack [c3-vpc] already exists
+An error occurred (AlreadyExistsException) when calling the CreateStack operation: Stack [c3-app] already exists

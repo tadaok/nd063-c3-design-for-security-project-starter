@@ -1,3 +1,48 @@
 # Describe GuardDuty findings that were detected related to the brute force attack
 
+The following finding were detected and was related to the brute force attack:
+[SAMPLE] UnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom
+[SAMPLE] Backdoor:EC2/C&CActivity.B!DNS
+[SAMPLE] UnauthorizedAccess:EC2/TorClient
+[SAMPLE] Trojan:EC2/DropPoint
+[SAMPLE] Trojan:EC2/DGADomainRequest.B
+[SAMPLE] Trojan:EC2/BlackholeTraffic
+[SAMPLE] Trojan:EC2/DNSDataExfiltration
+[SAMPLE] Persistence:IAMUser/AnomalousBehavior
+[SAMPLE] UnauthorizedAccess:EC2/MetadataDNSRebind
+[SAMPLE] Trojan:EC2/BlackholeTraffic!DNS
+[SAMPLE] UnauthorizedAccess:IAMUser/MaliciousIPCaller
+[SAMPLE] Stealth:IAMUser/CloudTrailLoggingDisabled
+[SAMPLE] Recon:IAMUser/MaliciousIPCaller
+[SAMPLE] Backdoor:EC2/DenialOfService.Dns
+[SAMPLE] UnauthorizedAccess:IAMUser/TorIPCaller
+[SAMPLE] Recon:EC2/PortProbeUnprotectedPort
+[SAMPLE] Behavior:EC2/NetworkPortUnusual
+[SAMPLE] Stealth:IAMUser/PasswordPolicyChange
+[SAMPLE] UnauthorizedAccess:EC2/MaliciousIPCaller.Custom
+[SAMPLE] UnauthorizedAccess:EC2/TorRelay
+[SAMPLE] Trojan:EC2/PhishingDomainRequest!DNS
+[SAMPLE] UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.OutsideAWS
+[SAMPLE] PenTest:IAMUser/PentooLinux
+[SAMPLE] PenTest:S3/ParrotLinux
+[SAMPLE] Recon:IAMUser/TorIPCaller
+[SAMPLE] Discovery:S3/MaliciousIPCaller
+[SAMPLE] Impact:EC2/WinRMBruteForce
+[SAMPLE] Backdoor:EC2/DenialOfService.UnusualProtocol
+[SAMPLE] Recon:EC2/PortProbeEMRUnprotectedPort
+[SAMPLE] Exfiltration:IAMUser/AnomalousBehavior
+[SAMPLE] PenTest:S3/KaliLinux
+[SAMPLE] Discovery:S3/TorIPCaller
+[SAMPLE] CryptoCurrency:EC2/BitcoinTool.B!DNS
+[SAMPLE] Backdoor:EC2/Spambot
+[SAMPLE] PenTest:S3/PentooLinux
+[SAMPLE] UnauthorizedAccess:EC2/RDPBruteForce
+[SAMPLE] UnauthorizedAccess:EC2/SSHBruteForce
+[SAMPLE] Backdoor:EC2/C&CActivity.B
+[SAMPLE] Recon:EC2/Portscan
+[SAMPLE] Backdoor:EC2/DenialOfService.Tcp
+[SAMPLE] Impact:EC2/AbusedDomainRequest.Reputation
+
+
 # Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+The Guard Duty make a continuosly analysis about network, account, and data access activity. Events and logs are used to make the findings
